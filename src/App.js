@@ -1,10 +1,17 @@
 import "./styles.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addTen, subs, TimeAddVal } from "./redux/counter/action";
-
-export deft funion App() {
-  con numval = useSelector((state) => state.counter.counterValue);
-  cont AsynObj = useSelector((state) => state.counter);
+/**
+ * The main App component.
+ * 
+ * This component retrieves state from the redux store using the useSelector hook, dispatches actions to the store using the useDispatch hook, 
+ * and renders a series of buttons that dispatch different actions when clicked.
+ * 
+ * @returns {JSX.Element} The rendered App component.
+ */
+export default function App() {
+  const numval = useSelector((state) => state.counter.counterValue);
+  const AsynObj = useSelector((state) => state.counter);
   const dispatch = useDispatch();
   return (
     <div className="App">
