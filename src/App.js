@@ -1,10 +1,17 @@
 import "./styles.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addTen, subs, TimeAddVal } from "./redux/counter/action";
-
-export deft funion App() {
-  con numval = useSelector((state) => state.counter.counterValue);
-  cont AsynObj = useSelector((state) => state.counter);
+/**
+ * A functional component that represents the main application.
+ *
+ * It uses the Redux useSelector hook to access the state of the counter and the dispatch hook to dispatch actions.
+ * It renders a div with a greeting, the current counter value, the error message (if any), the loading status, and buttons to dispatch actions to add or subtract from the counter.
+ *
+ * @returns {JSX.Element} The rendered component.
+ */
+export default function App() {
+  const numval = useSelector((state) => state.counter.counterValue);
+  const AsynObj = useSelector((state) => state.counter);
   const dispatch = useDispatch();
   return (
     <div className="App">
